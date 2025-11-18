@@ -26,5 +26,3 @@ run-api para lanzar un servidor de fastapi
 run-port [puerto] para abrir un puerto como 8000
 new-tunnel [puerto] para lanzar en un tunel gratuito tu web
 y mas de 60-80 comandos utiles(tambien de linux)
-
-**NOTA IMPORTANTE**: En el repositorio viene incluido un MarkDown que contiene una guia completa de todos y cada uno de los comandos con descripcion y ejemplo
