@@ -17,7 +17,9 @@ Write-Host ""
 function commands {
     $secciones = @(
 @'
-🧠 COMANDOS ÚTILES 💻
+╔════════════════════════════════════╗
+║   🧠 COMANDOS ÚTILES 💻            ║
+╚════════════════════════════════════╝
 
 🔹 Productividad rápida:
   clean                   # Limpiar la consola
@@ -33,7 +35,10 @@ function commands {
   ip-location [ip]        # Geolocaliza una IP
 '@,
 @'
-🔹 Git:
+╔════════════════════════════════════╗
+║   🔧 GIT                           ║
+╚════════════════════════════════════╝
+
   git-help                # Muestra comandos frecuentes de Git
   push-code               # Ejecuta add, commit y push en secuencia
   git init
@@ -50,7 +55,10 @@ function commands {
   git clone <url>
 '@,
 @'
-🔹 FastAPI:
+╔════════════════════════════════════╗
+║   ⚡ FASTAPI                       ║
+╚════════════════════════════════════╝
+
   api-fast                # Muestra ejemplos de rutas y uso
   uvicorn main:app --reload
   @app.get("/")
@@ -59,7 +67,10 @@ function commands {
   from pydantic import BaseModel
 '@,
 @'
-🔹 SQLite:
+╔════════════════════════════════════╗
+║   🗃️ SQLITE                        ║
+╚════════════════════════════════════╝
+
   sqlite-guide            # Muestra comandos útiles de SQLite
   sqlite3 database.db
   .tables
@@ -68,7 +79,10 @@ function commands {
   INSERT INTO usuarios VALUES (...);
 '@,
 @'
-🔹 Docker:
+╔════════════════════════════════════╗
+║   🐳 DOCKER                        ║
+╚════════════════════════════════════╝
+
   docker-tips             # Muestra comandos básicos de Docker
   docker build -t nombre .
   docker run -p 8000:8000 nombre
@@ -77,117 +91,179 @@ function commands {
   docker exec -it <id> bash
 '@,
 @'
-🔹 Linux Avanzado (WSL):
-  linux-lsof              # Ver qué proceso usa un puerto
-  linux-strace [PID]      # Rastrear llamadas del sistema de un proceso
-  linux-htop              # Monitor visual de procesos
-  linux-tmux              # Multiplexor de terminal persistente
-  linux-rsync [src] [dest]# Sincroniza carpetas locales/remotas
-  linux-jq [json] [query] # Extrae datos de JSON desde terminal
-  linux-nc                # Abre servidor TCP en puerto 4444
-  linux-iptables          # Muestra reglas del firewall
-  linux-findlogs          # Borra todos los archivos .log del directorio
-  linux-ss                # Ver conexiones de red, puertos abiertos, servicios activos
-'@,
+╔════════════════════════════════════╗
+║   🐧 LINUX AVANZADO (WSL)          ║
+╚════════════════════════════════════╝
 
-@'
-🔹 Linux Avanzado (WSL) — Extendido:
-  linux-top               # Monitor de procesos en tiempo real
-  linux-df                # Uso de disco por partición
-  linux-du [path]         # Tamaño de carpeta específica
-  linux-free              # Uso de memoria RAM y swap
-  linux-uptime            # Tiempo activo del sistema
-  linux-uname             # Info del kernel y sistema
-  linux-date              # Fecha y hora actual
-  linux-cal               # Calendario mensual
-  linux-whoami            # Usuario actual
-  linux-id                # UID, GID y grupos del usuario
-  linux-grep [pat] [file] # Buscar texto en archivo
-  linux-find [path] [name]# Buscar archivos
-  linux-tail [file]       # Últimas líneas de archivo
-  linux-head [file]       # Primeras líneas de archivo
-  linux-cat [file]        # Mostrar contenido de archivo
-  linux-touch [file]      # Crear archivo vacío
-  linux-mkdir [dir]       # Crear carpeta
-  linux-rm [target]       # Eliminar archivo o carpeta
-  linux-cp [src] [dest]   # Copiar archivos
-  linux-mv [src] [dest]   # Mover archivos
-  linux-chmod [mode] [file]# Cambiar permisos
-  linux-chown [user] [file]# Cambiar propietario
-  linux-ps                # Procesos activos
-  linux-kill [pid]        # Terminar proceso
-  linux-cron-edit         # Editar tareas programadas
-  linux-cron-list         # Ver tareas programadas
-  linux-env               # Variables de entorno
-  linux-export [var] [val]# Definir variable
-  linux-ping [host]       # Ping desde WSL
-  linux-curl [url]        # Petición HTTP
-  linux-wget [url]        # Descargar archivo
-  linux-nmap [target]     # Escaneo de red
-  linux-traceroute [host] # Ruta de red
-  linux-hostname          # Nombre del host
-  linux-man [cmd]         # Manual de comandos
-  linux-which [cmd]       # Ruta de comando
-  linux-history           # Historial de comandos
-  linux-alias [alias] [cmd]# Crear alias
+  linux-lsof              # Ver qué proceso usa un puerto
+  linux-strace [PID]      # Rastrear llamadas del sistema
+  linux-htop              # Monitor visual de procesos
+  linux-tmux              # Multiplexor de terminal
+  linux-rsync [src] [dest]# Sincroniza carpetas
+  linux-jq [json] [query] # Extrae datos de JSON
+  linux-nc                # Abre servidor TCP en puerto 4444
+  linux-iptables          # Reglas del firewall
+  linux-findlogs          # Borra archivos .log
+  linux-ss                # Conexiones de red activas
 '@,
 @'
-🔹 PowerShell Básico:
-  Get-Process             # Ver procesos activos
-  Get-Service             # Ver servicios del sistema
-  Get-Help <comando>      # Obtener ayuda detallada
-  Set-Alias gs Get-Service# Crear alias para comandos
-  Get-Command             # Ver todos los comandos disponibles
-  Get-History             # Ver historial de comandos
-  Start-Process notepad   # Abrir una app desde consola
-  Test-Path <ruta>        # Verifica si existe un archivo o carpeta
-  Remove-Item <archivo>   # Elimina un archivo
+╔════════════════════════════════════╗
+║   🧬 LINUX EXTENDIDO (WSL)         ║
+╚════════════════════════════════════╝
+
+  linux-top, linux-df, linux-du [path]
+  linux-free, linux-uptime, linux-uname
+  linux-date, linux-cal, linux-whoami
+  linux-id, linux-grep [pat] [file]
+  linux-find [path] [name], linux-tail [file]
+  linux-head [file], linux-cat [file]
+  linux-touch [file], linux-mkdir [dir]
+  linux-rm [target], linux-cp [src] [dest]
+  linux-mv [src] [dest], linux-chmod [mode] [file]
+  linux-chown [user] [file], linux-ps, linux-kill [pid]
+  linux-cron-edit, linux-cron-list
+  linux-env, linux-export [var] [val]
+  linux-ping [host], linux-curl [url]
+  linux-wget [url], linux-nmap [target]
+  linux-traceroute [host], linux-hostname
+  linux-man [cmd], linux-which [cmd]
+  linux-history, linux-alias [alias] [cmd]
 '@,
 @'
-🔹 Personalización:
+╔════════════════════════════════════╗
+║   💠 POWERSHELL BÁSICO             ║
+╚════════════════════════════════════╝
+
+  Get-Process, Get-Service
+  Get-Help <comando>, Set-Alias gs Get-Service
+  Get-Command, Get-History
+  Start-Process notepad
+  Test-Path <ruta>, Remove-Item <archivo>
+'@,
+@'
+╔════════════════════════════════════╗
+║   🎨 PERSONALIZACIÓN               ║
+╚════════════════════════════════════╝
+
+  ronald-mode             # Activa tu tema favorito
   set-theme <nombre>      # Cambia el tema visual
   list-themes             # Lista temas disponibles
   preview-theme <nombre>  # Previsualiza un tema
   font-guide              # Recomienda fuentes compatibles
 '@,
 @'
-🔹 Comandos Importantes:
-  run-port <puerto>       # Inicia un servidor HTTP en el puerto especificado
-  run-api                 # Corre un servidor local de FastAPI
-  ip-location [ip]        # Geolocaliza una IP
-  wifi-info               # Muestra datos sobre la Wi-Fi y conexión
-  net-check               # Probar conexión a Google
+╔════════════════════════════════════╗
+║   🚨 COMANDOS IMPORTANTES          ║
+╚════════════════════════════════════╝
+
+  run-port <puerto>       # Inicia servidor HTTP
+  run-api                 # Corre servidor FastAPI
+  ip-location [ip]        # Geolocaliza IP
+  wifi-info               # Info de Wi-Fi
+  net-check               # Test de conexión
   ip                      # Ver IP local
-  port-list               # Lista de puertos abiertos
-  port-check [host] [port]# Comprobar si un puerto está abierto
-  port-util-list          # Lista de utilidades de puertos
-  new-tunnel [puerto]     # Crea un túnel de Cloudflare
+  port-list               # Puertos abiertos
+  port-check [host] [port]# Verifica puerto
+  port-util-list          # Utilidades de puertos
+  new-tunnel [puerto]     # Túnel con Cloudflare
+  dev-status              # Estado del entorno de desarrollo
 '@
     )
 
-    foreach ($seccion in $secciones) {
+    $colores = @("Magenta", "Yellow", "Green", "Cyan", "Blue", "DarkCyan", "DarkMagenta", "DarkYellow", "DarkGreen")
+    $spinner = @("|", "/", "-", "\\")
+
+    for ($i = 0; $i -lt $secciones.Count; $i++) {
         Clear-Host
-        Write-Host $seccion -ForegroundColor Cyan
+
+        # Animación de carga
+        for ($j = 0; $j -lt 10; $j++) {
+            Write-Host "`rCargando sección $($i + 1)... $($spinner[$j % $spinner.Length])" -ForegroundColor DarkGray -NoNewline
+            Start-Sleep -Milliseconds 100
+        }
+
+        Clear-Host
+        $color = $colores[$i % $colores.Count]
+        Write-Host $secciones[$i] -ForegroundColor $color
         Write-Host "`nPresiona [Enter] para continuar..." -ForegroundColor DarkGray
         [void][System.Console]::ReadLine()
     }
 
-    Write-Host "`n✅ Todos los comandos han sido mostrados." -ForegroundColor Green
+    Clear-Host
+    Write-Host "✅ ¡Todos los comandos han sido mostrados!" -ForegroundColor Green
 }
 function push-code {
-    git add .
-    git commit -m "actualización rápida"
-    git push
+    $steps = @(
+        @{msg="📦 Agregando cambios al área de staging..."; cmd="git add ."; color="Yellow"},
+        @{msg="📝 Realizando commit: 'actualización rápida'..."; cmd='git commit -m "actualización rápida"'; color="Cyan"},
+        @{msg="🚀 Enviando cambios al repositorio remoto..."; cmd="git push"; color="Green"}
+    )
+
+    $spinner = @("|", "/", "-", "\\")
+    $i = 0
+
+    foreach ($step in $steps) {
+        Write-Host "`n$($step.msg)" -ForegroundColor $step.color
+
+        # Animación de carga
+        for ($j = 0; $j -lt 10; $j++) {
+            Write-Host "`r[$($spinner[$j % $spinner.Length])] Procesando..." -ForegroundColor DarkGray -NoNewline
+            Start-Sleep -Milliseconds 100
+        }
+
+        # Ejecutar comando
+        try {
+            Invoke-Expression $step.cmd
+        } catch {
+            Write-Host "`n❌ Error al ejecutar: $($step.cmd)" -ForegroundColor Red
+            return
+        }
+
+        Write-Host "`n✅ Comando ejecutado con éxito: $($step.cmd)" -ForegroundColor Green
+    }
 }
 function subirRepo {
-    param([string]$mensaje, [string]$link)
-    git init
-    git add .
-    git commit -m "$mensaje"
-    git branch -M main
-    git remote add origin $link
-    git push -u origin main
-    Write-Host "✅ Repositorio subido con éxito" -ForegroundColor Green
+    param(
+        [string]$mensaje,
+        [string]$link
+    )
+
+    if (-not $mensaje -or -not $link) {
+        Write-Host "❌ Error: Debes proporcionar un mensaje de commit y el link del repositorio." -ForegroundColor Red
+        return
+    }
+
+    $steps = @(
+        @{msg="🔧 Inicializando repositorio local..."; cmd="git init"; color="Yellow"},
+        @{msg="📦 Agregando archivos al staging..."; cmd="git add ."; color="Cyan"},
+        @{msg="📝 Realizando commit: '$mensaje'..."; cmd="git commit -m `"$mensaje`""; color="Green"},
+        @{msg="🌿 Estableciendo rama principal (main)..."; cmd="git branch -M main"; color="DarkYellow"},
+        @{msg="🔗 Enlazando repositorio remoto..."; cmd="git remote add origin $link"; color="DarkCyan"},
+        @{msg="🚀 Enviando código a GitHub..."; cmd="git push -u origin main"; color="Magenta"}
+    )
+
+    $spinner = @("⠋","⠙","⠹","⠸","⠼","⠴","⠦","⠧","⠇","⠏")
+
+    foreach ($step in $steps) {
+        Write-Host "`n$($step.msg)" -ForegroundColor $step.color
+
+        # Animación tipo web loader
+        for ($i = 0; $i -lt 12; $i++) {
+            Write-Host "`r$($spinner[$i % $spinner.Length]) Procesando..." -ForegroundColor DarkGray -NoNewline
+            Start-Sleep -Milliseconds 100
+        }
+
+        try {
+            Invoke-Expression $step.cmd
+            Write-Host "`n✅ Completado: $($step.cmd)" -ForegroundColor Green
+        } catch {
+            Write-Host "`n❌ Error al ejecutar: $($step.cmd)" -ForegroundColor Red
+            return
+        }
+    }
+
+    Write-Host "`n🎉 ¡Repositorio subido con éxito a GitHub!" -ForegroundColor Cyan
+    Write-Host "🌐 Link remoto: $link" -ForegroundColor DarkGray
 }
 
 function api-fast {
@@ -201,7 +277,39 @@ function api-fast {
 "@ | Write-Host -ForegroundColor Cyan
 }
 function run-api {
-    Write-Host "🚀 Lanzando servidor FastAPI..." -ForegroundColor Green
+    Clear-Host
+
+    $ascii = @'
+ __________________________________                                          DataBase
+|  ______________________________  |                                     _________________
+| |                              | |  .   .       .                     |\_______________/|
+| |           ___  _ _           | |        .  .                        |\_______________/|
+| |     /\   |   |  |            | | . : .. : .   .        .            |\_______________/|
+| |    /__\  |___|  |            | |     :      .     :   .   .         |\_______________/|
+| |   /    \ |     _|_           | |  .  .     :  .  .    .             |\_______________/|
+| |                              | |                                    |\_______________/|
+| |______________________________| |                                    |\_______________/|
+|__________________________________|                                            ▲
+                |  |                                                          │
+          ______|  |______                                              FastAPI Models
+        |_________________|                                             Pydantic BaseModel
+'@
+
+    $steps = @(
+        "🔧 Preparando entorno virtual...",
+        "📦 Cargando dependencias...",
+        "🧠 Inicializando FastAPI...",
+        "🔥 Ejecutando Uvicorn con recarga activa..."
+    )
+
+    Write-Host $ascii -ForegroundColor Green
+
+    foreach ($step in $steps) {
+        Write-Host $step -ForegroundColor Cyan
+        Start-Sleep -Milliseconds 500
+    }
+
+    Write-Host "`n🚀 Lanzando servidor FastAPI..." -ForegroundColor Green
     python -m uvicorn main:app --reload
 }
 
@@ -335,7 +443,38 @@ function linux-alias { param($alias, $cmd) wsl bash -c "alias $alias='$cmd'" }
 function run-port {
   param($port)
   Write-Host "🚀 Servidor HTTP en puerto $port iniciado. https://localhost:$port" -ForegroundColor Green
-  python -m http.server $port
+    $spinner = @('⠋','⠙','⠹','⠸','⠼','⠴','⠦','⠧','⠇','⠏')
+    $i = 0
+    $antena = @(
+        "   .               .",
+        " .·  ·  .     .  ·  `.",
+        " :  :  :  (¯)  :  :  :",
+        " ·.  ·  · /¯\ ·  ·  .·",
+        "   ·     /¯¯¯\     ·",
+        "        /¯¯¯¯¯\"
+        "       /¯¯¯¯¯¯¯\"
+    )
+
+    foreach ($line in $antena) {
+        $styled = ""
+        foreach ($char in $line.ToCharArray()) {
+            if ($char -eq '.' -or $char -eq ':' -or $char -eq '·') {
+                $styled += "`e[32m$char`e[0m"  # Verde
+            } else {
+                $styled += $char
+            }
+        }
+        Write-Host $styled
+    }
+      python -m http.server $port
+    while (-not $proc.HasExited) {
+        Write-Host -NoNewline "`r$($spinner[$i]) Túnel activo... "
+        Start-Sleep -Milliseconds 100
+        $i = ($i + 1) % $spinner.Length
+    }
+
+    Write-Host "`r📴 Túnel cerrado.                          " -ForegroundColor Red
+
 }
 
 function port-list {
@@ -407,7 +546,27 @@ function new-tunneld {
 
     $spinner = @('⠋','⠙','⠹','⠸','⠼','⠴','⠦','⠧','⠇','⠏')
     $i = 0
+    $antena = @(
+        "   .               .",
+        " .·  ·  .     .  ·  `.",
+        " :  :  :  (¯)  :  :  :",
+        " ·.  ·  · /¯\ ·  ·  .·",
+        "   ·     /¯¯¯\     ·",
+        "        /¯¯¯¯¯\"
+        "       /¯¯¯¯¯¯¯\"
+    )
 
+    foreach ($line in $antena) {
+        $styled = ""
+        foreach ($char in $line.ToCharArray()) {
+            if ($char -eq '.' -or $char -eq ':' -or $char -eq '·') {
+                $styled += "`e[32m$char`e[0m"  # Verde
+            } else {
+                $styled += $char
+            }
+        }
+        Write-Host $styled
+    }
     while (-not $proc.HasExited) {
         Write-Host -NoNewline "`r$($spinner[$i]) Túnel activo... "
         Start-Sleep -Milliseconds 100
@@ -469,3 +628,71 @@ function check-tunnel-env {
     }
 }
 check-tunnel-env
+
+function dev-status {
+    Write-Host "`n🧠 Estado del entorno de desarrollo:" -ForegroundColor Cyan
+
+    # 1. Dependencias clave de Python
+    Write-Host "`n📦 Dependencias de Python:" -ForegroundColor Yellow
+    try {
+        pip list | Select-String "fastapi|uvicorn|requests|sqlite|httpx|pydantic|python-dotenv"
+    } catch {
+        Write-Host "❌ pip no está disponible o falló." -ForegroundColor Red
+    }
+
+    # 2. Puertos activos con nombre de proceso
+    Write-Host "`n🔌 Puertos activos:" -ForegroundColor Yellow
+    Get-NetTCPConnection -State Listen |
+    ForEach-Object {
+        $proc = Get-Process -Id $_.OwningProcess -ErrorAction SilentlyContinue
+        [PSCustomObject]@{
+            Port     = $_.LocalPort
+            Address  = $_.LocalAddress
+            Process  = if ($proc) { $proc.ProcessName } else { "N/A" }
+            PID      = $_.OwningProcess
+        }
+    } | Sort-Object Port | Format-Table -AutoSize
+
+    # 3. Servicios clave activos
+    Write-Host "`n🧠 Servicios clave activos:" -ForegroundColor Yellow
+    $targets = @("Docker","PostgreSQL","WSL","Windows Defender Firewall","Bluetooth","Audio","Network","Cloudflared")
+    Get-Service | Where-Object {
+        $_.Status -eq "Running" -and ($targets | ForEach-Object { $_ }) -contains $_.DisplayName
+    } | Select-Object DisplayName, Status | Format-Table -AutoSize
+
+    # 4. Información del sistema
+    Write-Host "`n🖥️ Información del sistema:" -ForegroundColor Yellow
+    try {
+        $os = Get-CimInstance Win32_OperatingSystem
+        $cpu = Get-CimInstance Win32_Processor
+        $ramGB = [math]::Round($os.TotalVisibleMemorySize / 1MB, 2)
+
+        Write-Host "🧬 OS: $($os.Caption) $($os.Version)" -ForegroundColor Gray
+        Write-Host "🧠 CPU: $($cpu.Name)" -ForegroundColor Gray
+        Write-Host "💾 RAM: $ramGB GB" -ForegroundColor Gray
+    } catch {
+        Write-Host "❌ No se pudo obtener información del sistema." -ForegroundColor Red
+    }
+
+    # 5. Red y Wi-Fi
+    Write-Host "`n📡 Red y Wi-Fi:" -ForegroundColor Yellow
+    try {
+        netsh wlan show interfaces | Select-String "SSID|Signal|State"
+        Get-NetIPAddress | Where-Object {$_.InterfaceAlias -like "*Wi-Fi*"} | Format-Table -AutoSize
+    } catch {
+        Write-Host "❌ No se pudo obtener información de red." -ForegroundColor Red
+    }
+
+    # 6. Herramientas disponibles
+    Write-Host "`n🧰 Herramientas disponibles:" -ForegroundColor Yellow
+    $tools = @("wsl", "docker", "git", "cloudflared", "python", "uvicorn")
+    foreach ($tool in $tools) {
+        if (Get-Command $tool -ErrorAction SilentlyContinue) {
+            Write-Host "✅ $tool disponible" -ForegroundColor Green
+        } else {
+            Write-Host "❌ $tool no encontrado" -ForegroundColor Red
+        }
+    }
+
+    Write-Host "`n✅ Diagnóstico completo finalizado." -ForegroundColor Green
+}
