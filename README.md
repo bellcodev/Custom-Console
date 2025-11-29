@@ -1,5 +1,12 @@
 # PowerShell
 ![Imagen](https://i.imgur.com/sAM7VzZ.png)
+
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-yellow)
+![Issues](https://img.shields.io/github/issues/bellcodev/Custom-Console)
+![Stars](https://img.shields.io/github/stars/bellcodev/Custom-Console?style=social)
+
 ## Descripcion
 Este script es para personalizar la terminal, aparte de hacerla muy atractiva visualmente tambien le agrega comandos que facilitan trabajar con el backend.
 ### Paso a Paso
