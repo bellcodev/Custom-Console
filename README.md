@@ -1,5 +1,5 @@
 # PowerShell
-![Imagen](https://i.imgur.com/3U845ac.png)
+![Imagen](https://i.imgur.com/sAM7VzZ.png)
 ## Descripcion
 Este script es para personalizar la terminal, aparte de hacerla muy atractiva visualmente tambien le agrega comandos que facilitan trabajar con el backend.
 ### Paso a Paso
